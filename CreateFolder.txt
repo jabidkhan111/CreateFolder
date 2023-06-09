@@ -1,0 +1,30 @@
+//Java
+
+        File externalStorageDir = Environment.getExternalStorageDirectory();
+        File folder = new File(externalStorageDir, "folderName/jk");
+        if (folder.exists() && folder.isDirectory()) {
+            Toast.makeText(this, "Already", Toast.LENGTH_SHORT).show();
+        } else {
+            if (folder.mkdirs()) {
+                Toast.makeText(this, "New Create", Toast.LENGTH_SHORT).show();
+             
+            } else {
+                // Failed to create folder
+                Toast.makeText(this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+             
+            }
+        }
+		
+//Kotlin
+		val externalStorageDir = Environment.getExternalStorageDirectory()
+        val folder = File(externalStorageDir, "folderName/jk")
+        if (folder.exists() && folder.isDirectory) {
+            Toast.makeText(this, "Already", Toast.LENGTH_SHORT).show()
+        } else {
+            if (folder.mkdirs()) {
+                Toast.makeText(this, "New Create", Toast.LENGTH_SHORT).show()
+            } else {
+                // Failed to create folder
+                Toast.makeText(this, "Something Went Wrong", Toast.LENGTH_SHORT).show()
+            }
+        }
